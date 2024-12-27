@@ -1,0 +1,121 @@
+db.posts.find({ likes: { $in: 2 } })
+db.posts.find( { $and: [ { likes: { $ne: 4 } }, { likes: { $exists: true } } ] } )
+
+
+db.posts.find( { $not: [ { likes: { $gt: 20 } }, { category: 'News' } ] } )
+
+db.posts.find( { likes: { $not: { $lte: 2 } } } )
+
+
+db.posts.(
+   { title: 'Post 1', lastModified: ISODate("2013-10-02T01:11:18.965Z") }
+)
+
+
+db.posts.updateOne(
+   { title: Post 6 },
+   { $set:
+      {
+        likes: 500,
+      }
+   }
+)
+
+
+db.posts.updateOne({ title: 'Post 6' },
+{
+  $unset: {
+    title: 'Post 6',
+    body: 'Body of post.',
+    category: 'News'
+  }
+},
+{
+  upsert: true
+})
+
+
+
+
+
+db.posts.find({}, {title: 'Post 6', date: 1})
+
+
+db.embedded_movies.aggregate([
+  { $group: { _id: "$year", totalUsers: { $count: 1 } } }
+])
+
+db.movies.aggregate([ { $limit: 1 } ])
+
+db.movies.aggregate([
+  {
+    $project: {
+      "year": 1,
+      "runtime": 1,
+      "rated": 1
+    }
+  },
+  {
+    $limit: 5
+  }
+])
+
+
+db.movies.aggregate([ 
+  { 
+    $sort: { "accommodates": -1 } 
+  },
+  {
+    $project: {
+      "year": 1,
+      "rated": 1
+    }
+  },
+  {
+    $limit: 5
+  }
+])
+
+db.movies.aggregate([
+  {
+    $match: { "rated": "TV-G" }
+  },
+  {
+    $count: "total"
+  }
+])
+
+db.comments.aggregate([
+  {
+    $lookup: {
+      from: "movies",
+      localField: "movie_id",
+      foreignField: "_id",
+      as: "movie_details",
+    },
+  },
+  {
+    $limit: 2
+  }
+])
+
+
+db.movies.aggregate([
+  {
+    $match: { "runtime": 14 }
+  },
+  {
+    $count: "total"
+  }
+])
+
+
+db.movies.aggregate([ 
+  { $match : { property_type : "awards" } },
+  { $limit: 2 },
+  { $project: {
+    "wins": 1,
+    "nominations": 1,
+    "text": 1
+  }}
+])

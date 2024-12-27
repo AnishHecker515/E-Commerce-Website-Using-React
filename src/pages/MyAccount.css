@@ -1,0 +1,81 @@
+   .my-account {
+    padding: 20px;
+  }
+  
+  .my-account .container {
+    margin-top: 20px;
+  }
+  
+  .nav-pills .nav-link {
+    background-color: #f8f9fa;
+    margin-bottom: 10px;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .nav-pills .nav-link.active {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .user-details {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-photo {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+  }
+  
+  .user-info p {
+    margin: 0;
+    padding: 5px 0;
+  }
+  
+  .table {
+    margin-top: 20px;
+  }
+  
+  .table thead th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .table-bordered {
+    border: 1px solid #dee2e6;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

@@ -1,0 +1,71 @@
+/* Posts.css */
+
+/* Main container for the product view */
+.product-view {
+    padding: 20px; /* Padding around the entire product view */
+    background-color: #f8f9fa; /* Light background for the overall section */
+}
+
+/* Container for the inner layout */
+.container {
+    max-width: 1200px; /* Maximum width for the container */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Row styles */
+.row {
+    margin: 0 -15px; /* Negative margin to offset padding in columns */
+}
+
+/* Styles for product items */
+.product-item {
+    background-color: #fff; /* White background for each product item */
+    border: 1px solid #ddd; /* Light border around product items */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Padding inside product items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-bottom: 30px; /* Space below each product item */
+    transition: transform 0.3s; /* Smooth scale effect on hover */
+}
+
+.product-item:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Title styles */
+.product-item p {
+    font-size: 1.1rem; /* Font size for product titles */
+    color: #333; /* Dark color for text */
+    text-align: center; /* Center align the text */
+    margin: 0; /* Remove default margin */
+}
+
+/* Short product options styles */
+.product-short {
+    margin-bottom: 20px; /* Space below the short product options */
+}
+
+/* Dropdown styles */
+.dropdown {
+    position: relative; /* Position relative for dropdown */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .col-md-8, .col-md-4 {
+        flex: 0 0 100%; /* Full width on small screens */
+        max-width: 100%; /* Full width on small screens */
+    }
+
+    .col-lg-4 {
+        flex: 0 0 50%; /* Two items in a row on medium screens */
+        max-width: 50%; /* Two items in a row on medium screens */
+    }
+}
+
+.post-icon {
+    font-size: 24px;
+    margin-right: 8px;
+    color: #6c757d; /* Change this to your desired color */
+}
+
